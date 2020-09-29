@@ -37,7 +37,8 @@ The following functionalities can be used:
 
 
 ## storefront
-A Vue application running a dummy storefront:
-![Alt text](https://imgur.com/a/QTogtrK)
-
 Run using: `npm run serve`
+
+A Vue application running a dummy storefront:
+![Alt text](storefront/src/assets/screenshot.png)
+
