@@ -1,23 +1,25 @@
 <template>
-  <div class="card text-center m-3">
-    <h5 class="card-header">Simple GET Request</h5>
-    <div class="card-body">Total vue packages: {{totalVuePackages}}</div>
+  <div class="card">
+    <header>
+      <img class="logo" alt="Headless Example - Using Vue and the REST api" src="./assets/logo.png">
+      <h1>Headless Example</h1>
+      <h3>Using Vue and the REST api</h3>
+    </header>
+    <Products/>
   </div>
 </template>
 
+<style>
+  @import './assets/css/main.css';
+</style>
+
 <script>
+import Products from './components/Products.vue'
+
 export default {
-  name: "get-request",
-  data() {
-    return {
-      totalVuePackages: null
-    };
-  },
-  created() {
-    // Simple GET request using fetch
-    fetch("http://vue-storefront.localhost/api/product/read_single.php?id=1")
-        .then(response => response.json())
-        .then(data => (this.totalVuePackages = data ));
+  name: "vue-storefront",
+  components: {
+    Products
   }
 };
 </script>
