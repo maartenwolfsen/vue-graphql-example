@@ -14,7 +14,7 @@ $db = $database->getConnection();
 $product = new Product($db);
 $data = json_decode(file_get_contents("php://input"));
 
-if(
+if (
     empty($data->name) ||
     empty($data->price) ||
     empty($data->description) ||
